@@ -1,0 +1,67 @@
+@font-face {
+    font-family: 'Pixelated Elegance';
+    src: url(./fonts/PixelatedEleganceRegular-ovyAA.ttf);
+}
+
+/*reset
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+} */
+
+/* Global styles */
+body {
+    background-color: #dcdcdc;
+}
+
+/* main wrapper for total-site margins*/
+
+.wrapper{
+    max-width: 80%;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* header with background image */
+.header-with-background {
+    position: relative;
+    max-width: 85%;
+    background-image: url('kbPerspective_scaled.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 2rem;
+
+    /*text options*/
+    font: 1.3rem 'Pixelated Elegance', sans-serif;
+    border-radius: 1.8rem;
+    color: #fcfdff; /* Optional: makes text readable */
+    text-shadow: 8px 8px 32px #07244f; /* Optional: improves contrast */
+
+    margin-bottom: 1rem;
+
+    overflow: hidden; /*this keeps any overlays in the bounds of the nice rounded corners*/
+}
+
+.header-with-background::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.30); /* Semi-transparent black overlay */
+    border-radius: 1.8rem; /* Match the border radius of the header */
+    z-index: 0; /* Ensure the overlay is behind the text */
+}
+
+.header-with-background > * {
+    position: relative;
+    z-index: 1;
+}
+
+.phonenumber-under-head{
+    font: 1.2rem 'Pixelated Elegance', sans-serif;
+    color: #16151a; /* Optional: makes text readable */
+    text-shadow: 2px 2px 8px #07244f; /* Optional: improves contrast */
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
